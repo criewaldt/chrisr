@@ -1,0 +1,472 @@
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title ChrisRiewaldt.com
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='Free HTML5 Template by FREEHTML5.CO')
+        meta(name='keywords', content='free html5, free template, free bootstrap, html5, css3, mobile first, responsive')
+        meta(name='author', content='FREEHTML5.CO')
+        link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700', rel='stylesheet', type='text/css')
+        // Animate.css
+        link(rel='stylesheet', href='css/animate.css')
+        // Icomoon Icon Fonts
+        link(rel='stylesheet', href='css/icomoon.css')
+        // Simple Line Icons
+        link(rel='stylesheet', href='css/simple-line-icons.css')
+        // Magnific Popup
+        link(rel='stylesheet', href='css/magnific-popup.css')
+        // Bootstrap
+        link(rel='stylesheet', href='css/bootstrap.css')
+        link(rel='stylesheet', href='css/style.css')
+        // Styleswitcher ( This style is for demo purposes only, you may delete this anytime. )
+        link#theme-switch(rel='stylesheet', href='css/style.css')
+        
+        // Modernizr JS
+        script(src='js/modernizr-2.6.2.min.js')
+        // FOR IE9 below
+        //if lt IE 9
+            script(src='js/respond.min.js')
+    body
+        header#fh5co-header(role='banner')
+            .container
+                // <div class="row">
+                nav.navbar.navbar-default
+                    .navbar-header
+                        // Mobile Toggle Menu Button
+                        a.js-fh5co-nav-toggle.fh5co-nav-toggle(href='#', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                            i
+                        a.navbar-brand(href='index.html') ChrisRiewaldt.com
+                    #navbar.navbar-collapse.collapse
+                        ul.nav.navbar-nav.navbar-right
+                            li.active
+                                a(href='#', data-nav-section='home')
+                                    span Home
+                            li
+                                a(href='#', data-nav-section='work')
+                                    span My Work
+                            li
+                                a(href='#', data-nav-section='testimonials')
+                                    span My CV
+                            li
+                                a(href='#', data-nav-section='services')
+                                    span Services
+                            li
+                                a(href='#', data-nav-section='about')
+                                    span About
+                            li
+                                a(href='#', data-nav-section='contact')
+                                    span Social
+                // </div>
+        section#fh5co-home(data-section='home', style='background-image: url(images/full_image_2.jpg);', data-stellar-background-ratio='0.5')
+            .gradient
+            .container
+                .text-wrap
+                    .text-inner
+                        .row
+                            .col-md-8.col-md-offset-2
+                                h1.to-animate Christopher D. Riewaldt
+                                h2.to-animate
+                                    | Computer Nerd | Artist | Licensed Real Estate Salesperson
+                                    br
+                                    | Gamer | Coffee Addict | Mid/Support
+            .slant
+        section#fh5co-intro
+            .container
+                .row.row-bottom-padded-lg
+                    .fh5co-block.to-animate(style='background-image: url(images/img_7.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.icon-briefcase
+                            h2 Real Estate
+                            p
+                                | Licensed real estate salesperson in New York, Connecticut, Georgia, Oklahoma, Pennsylvania, and West Virginia.
+                                | Practicing since 2010.
+                            p
+                                a.btn.btn-primary(href='http://nyls.net/?page=agents&id=79') My Active Listings
+                    .fh5co-block.to-animate(style='background-image: url(images/img_8.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.icon-github
+                            h2 Software
+                            p
+                                | Self-taught scripter with a portfolio of tools. 
+                                | Experienced with Python and Node/JavaScript, I'm interested in web development, and data aggregation & analysis.
+                            p
+                                a.btn.btn-primary(href='https://github.com/criewaldt') My GitHub
+                    .fh5co-block.to-animate(style='background-image: url(images/img_10.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.glyphicon.glyphicon-screenshot
+                            h2 Gaming
+                            p
+                                | When I have time, I love to play and record games. Watch me go Rambo on randos via Plays.TV.
+                            p
+                                a.btn.btn-primary(href='http://plays.tv/u/baeTheLegend') My Plays.TV
+                //.row.watch-video.text-center.to-animate
+                //    span Watch the video
+                //    a.popup-vimeo.btn-video(href='https://vimeo.com/channels/staffpicks/93951774')
+                //        i.icon-play2
+        section#fh5co-work(data-section='work')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Stuff I've done
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3
+                                    | Just a few things I've created or contributed to.
+                .row.row-bottom-padded-sm
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_1.jpg')
+                            img.img-responsive(src='images/esb.jpg', alt='http://www.ExchangeStreetBarber.com')
+                            .fh5co-text
+                                h2 ExchangeStreetBarber.com
+                                span A business homepage with 24/7 Booking via Vagaro: Node/Express on Heroku
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_2.jpg')
+                            img.img-responsive(src='images/advertapi.jpg', alt='http://www.AdvertAPI.com')
+                            .fh5co-text
+                                h2 AdvertAPI.com
+                                span An advertising platform for real estate agents: Python/Flask with AWS DynamoDB & Lambda on PythonAnywhere
+                    .clearfix.visible-sm-block
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_3.jpg')
+                            img.img-responsive(src='images/work_3.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 3
+                                span Web
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_4.jpg')
+                            img.img-responsive(src='images/work_4.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 4
+                                span UI/UX
+                    .clearfix.visible-sm-block
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_5.jpg')
+                            img.img-responsive(src='images/work_5.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 1
+                                span Photography
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_6.jpg')
+                            img.img-responsive(src='images/work_6.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 2
+                                span Illustration
+                    .clearfix.visible-sm-block
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_7.jpg')
+                            img.img-responsive(src='images/work_7.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 3
+                                span Web
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_8.jpg')
+                            img.img-responsive(src='images/work_8.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 4
+                                span Sketch
+                    .clearfix.visible-sm-block
+                    .col-md-4.col-sm-6.col-xxs-12
+                        a.fh5co-project-item.image-popup.to-animate(href='images/work_1.jpg')
+                            img.img-responsive(src='images/work_1.jpg', alt='Image')
+                            .fh5co-text
+                                h2 Project 2
+                                span Illustration
+                .row
+                    .col-md-12.text-center.to-animate
+                        p
+                            | * Demo images from 
+                            a(href='http://plmd.me/', target='_blank') plmd.me
+        section#fh5co-testimonials(data-section='testimonials')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate My CV
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3
+                                    | Download
+                                    br
+                                    a(href="cv/ChrisRiewaldtCV.PDF") PDF 
+                                    | | 
+                                    a(href="cv/ChrisRiewaldtCV.doc") Word
+                .row
+                    .col-md-4
+                        .box-testimony
+                            blockquote.to-animate-2
+                                p
+                                    | “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
+                            .author.to-animate
+                                figure
+                                    img(src='images/person1.jpg', alt='Person')
+                                p
+                                    | Jean Doe, CEO 
+                                    a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                                    span.subtext Creative Director
+                    .col-md-4
+                        .box-testimony
+                            blockquote.to-animate-2
+                                p
+                                    | “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”
+                            .author.to-animate
+                                figure
+                                    img(src='images/person2.jpg', alt='Person')
+                                p
+                                    | John Doe, Senior UI 
+                                    a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                                    span.subtext Creative Director
+                    .col-md-4
+                        .box-testimony
+                            blockquote.to-animate-2
+                                p
+                                    | “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. ”
+                            .author.to-animate
+                                figure
+                                    img(src='images/person3.jpg', alt='Person')
+                                p
+                                    | Chris Nash, Director 
+                                    a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                                    span.subtext Creative Director
+        section#fh5co-services(data-section='services')
+            .container
+                .row
+                    .col-md-12.section-heading.text-left
+                        h2.left-border.to-animate Things I Like
+                        .row
+                            .col-md-8.subtext.to-animate
+                                h3
+                                    | Including but not limited to:
+                .row
+                    .col-md-6.col-sm-6.fh5co-service.to-animate
+                        i.icon.to-animate-2.icon-anchor
+                        h3 Brand & Strategy
+                        p
+                            | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    .col-md-6.col-sm-6.fh5co-service.to-animate
+                        i.icon.to-animate-2.icon-layers2
+                        h3 Web & Interface
+                        p
+                            | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    .clearfix.visible-sm-block
+                    .col-md-6.col-sm-6.fh5co-service.to-animate
+                        i.icon.to-animate-2.icon-video2
+                        h3 Photo & Video
+                        p
+                            | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    .col-md-6.col-sm-6.fh5co-service.to-animate
+                        i.icon.to-animate-2.icon-monitor
+                        h3 CMS & eCommerce
+                        p
+                            | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+        section#fh5co-about(data-section='about')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate About Me
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 I'm goofy when appropriate, focused when needed, but always determined to solve problems. 
+                                    | I enjoy taking things apart and putting them back together. My curiosity and creativity drive my interests in technology, art, and the quest for knowledge.
+                .row
+                    .col-md-4
+                        .fh5co-person.text-center.to-animate
+                            figure
+                                img(src='images/person1.jpg', alt='Image')
+                            h3 Jean Smith
+                            span.fh5co-position Web Designer
+                            p
+                                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                            ul.social.social-circle
+                                li
+                                    a(href='#')
+                                        i.icon-twitter
+                                li
+                                    a(href='#')
+                                        i.icon-facebook
+                                li
+                                    a(href='#')
+                                        i.icon-dribbble
+                    .col-md-4
+                        .fh5co-person.text-center.to-animate
+                            figure
+                                img(src='images/person2.jpg', alt='Image')
+                            h3 Rob Smith
+                            span.fh5co-position Web Developer
+                            p
+                                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                            ul.social.social-circle
+                                li
+                                    a(href='#')
+                                        i.icon-twitter
+                                li
+                                    a(href='#')
+                                        i.icon-facebook
+                                li
+                                    a(href='#')
+                                        i.icon-github
+                    .col-md-4
+                        .fh5co-person.text-center.to-animate
+                            figure
+                                img(src='images/person3.jpg', alt='Image')
+                            h3 Larry Ben
+                            span.fh5co-position Web Designer
+                            p
+                                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                            ul.social.social-circle
+                                li
+                                    a(href='#')
+                                        i.icon-twitter
+                                li
+                                    a(href='#')
+                                        i.icon-facebook
+                                li
+                                    a(href='#')
+                                        i.icon-dribbble
+        section#fh5co-counters(style='background-image: url(images/full_image_1.jpg);', data-stellar-background-ratio='0.5')
+            .fh5co-overlay
+            .container
+                .row
+                    .col-md-12.section-heading.text-center.to-animate
+                        h2 Fun Facts
+                .row
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-briefcase.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='89', data-speed='5000', data-refresh-interval='50') 89
+                            span.fh5co-counter-label Finished projects
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-code.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='2343409', data-speed='5000', data-refresh-interval='50') 2343409
+                            span.fh5co-counter-label Line of codes
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-cup.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='1302', data-speed='5000', data-refresh-interval='50') 1302
+                            span.fh5co-counter-label Cup of coffees
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-people.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='52', data-speed='5000', data-refresh-interval='50') 52
+                            span.fh5co-counter-label Happy clients
+        section#fh5co-contact(data-section='contact')
+            .container
+                .row
+                    .col-md-12.section-heading.text-center
+                        h2.to-animate Get In Touch
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3
+                                    | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                .row.row-bottom-padded-md
+                    .col-md-6.to-animate
+                        h3 Contact Info
+                        ul.fh5co-contact-info
+                            li.fh5co-contact-address
+                                i.icon-home
+                                | 							5555 Love Paradise 56 New Clity 5655, 
+                                br
+                                | Excel Tower United Kingdom
+                            li
+                                i.icon-phone
+                                |  (123) 465-6789
+                            li
+                                i.icon-envelope
+                                | info@freehtml5.co
+                            li
+                                i.icon-globe
+                                a(href='http://freehtml5.co/', target='_blank') freehtml5.co
+                    .col-md-6.to-animate
+                        h3 Contact Form
+                        .form-group
+                            label.sr-only(for='name') Name
+                            input#name.form-control(placeholder='Name', type='text')
+                        .form-group
+                            label.sr-only(for='email') Email
+                            input#email.form-control(placeholder='Email', type='email')
+                        .form-group
+                            label.sr-only(for='phone') Phone
+                            input#phone.form-control(placeholder='Phone', type='text')
+                        .form-group
+                            label.sr-only(for='message') Message
+                            textarea#message.form-control(name='', cols='30', rows='5', placeholder='Message')
+                        .form-group
+                            input.btn.btn-primary.btn-lg(value='Send Message', type='submit')
+            #map.to-animate
+        footer#footer(role='contentinfo')
+            a.gotop.js-gotop(href='#')
+                i.icon-arrow-up2
+            .container
+                div
+                    .col-md-12.text-center
+                        p
+                            | © Elate Free HTML5. All Rights Reserved. 
+                            br
+                            | Created by 
+                            a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                            |  Images: 
+                            a(href='http://pexels.com/', target='_blank') Pexels
+                            | , 
+                            a(href='http://plmd.me/', target='_blank') plmd.me
+                .row
+                    .col-md-12.text-center
+                        ul.social.social-circle
+                            li
+                                a(href='#')
+                                    i.icon-twitter
+                            li
+                                a(href='#')
+                                    i.icon-facebook
+                            li
+                                a(href='#')
+                                    i.icon-youtube
+        // For demo purposes Only ( You may delete this anytime :-)
+        #colour-variations
+            a.option-toggle
+                i.icon-gear
+            h3 Preset Colors
+            ul
+                li
+                    a(href='javascript: void(0);', data-theme='style')
+                        span(style='background: #3f95ea;')
+                        span(style='background: #52d3aa;')
+                        span(style='background: #f2f2f2;')
+                li
+                    a(href='javascript: void(0);', data-theme='style2')
+                        span(style='background: #329998;')
+                        span(style='background: #6cc99c;')
+                        span(style='background: #f2f2f2;')
+                li
+                    a(href='javascript: void(0);', data-theme='style3')
+                        span(style='background: #9f466e;')
+                        span(style='background: #c24d67;')
+                        span(style='background: #f2f2f2;')
+                li
+                    a(href='javascript: void(0);', data-theme='style4')
+                        span(style='background: #21825C;')
+                        span(style='background: #A4D792;')
+                        span(style='background: #f2f2f2;')
+        // End demo purposes only
+        // jQuery
+        script(src='js/jquery.min.js')
+        // jQuery Easing
+        script(src='js/jquery.easing.1.3.js')
+        // Bootstrap
+        script(src='js/bootstrap.min.js')
+        // Waypoints
+        script(src='js/jquery.waypoints.min.js')
+        // Stellar Parallax
+        script(src='js/jquery.stellar.min.js')
+        // Counter
+        script(src='js/jquery.countTo.js')
+        // Magnific Popup
+        script(src='js/jquery.magnific-popup.min.js')
+        script(src='js/magnific-popup-options.js')
+        // Main JS (Do not remove)
+        script(src='js/main.js')
