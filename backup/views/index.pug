@@ -49,11 +49,14 @@ html
                                 a(href='#', data-nav-section='testimonials')
                                     span About Me
                             li
-                                a(href='#', data-nav-section='services')
+                                a(href='#', data-nav-section='cv')
                                     span My CV
                             li
-                                a(href='#', data-nav-section='more')
-                                    span A Bit More...
+                                a(href='#', data-nav-section='services')
+                                    span Things I Like
+                            li
+                                a(href='#', data-nav-section='about')
+                                    span About
                             li
                                 a(href='#', data-nav-section='contact')
                                     span Social
@@ -129,9 +132,10 @@ html
                     
                     
                 .row
-                    .col-md-12.text-center.to-animate 
-                        a(href='http://github.com/criewaldt', target='_blank') 
-                            i.icon-github
+                    .col-md-12.text-center.to-animate
+                        p
+                            | Take a look at my 
+                            a(href='http://github.com/criewaldt', target='_blank') GitHub
         section#fh5co-testimonials(data-section='testimonials')
             .container
                 .row
@@ -240,17 +244,55 @@ html
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3 Amherst Regional High School
                                 h4 Class of 2002
-                                
-                                
+            
+                .row
+                    .col-md-4
+                        .box-testimony
+                            blockquote.to-animate-2
+                                p
+                                    | “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”
+                            .author.to-animate
+                                figure
+                                    img(src='images/person1.jpg', alt='Person')
+                                p
+                                    | Jean Doe, CEO 
+                                    a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                                    span.subtext Creative Director
+                    .col-md-4
+                        .box-testimony
+                            blockquote.to-animate-2
+                                p
+                                    | “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.”
+                            .author.to-animate
+                                figure
+                                    img(src='images/person2.jpg', alt='Person')
+                                p
+                                    | John Doe, Senior UI 
+                                    a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                                    span.subtext Creative Director
+                    .col-md-4
+                        .box-testimony
+                            blockquote.to-animate-2
+                                p
+                                    | “Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. ”
+                            .author.to-animate
+                                figure
+                                    img(src='images/person3.jpg', alt='Person')
+                                p
+                                    | Chris Nash, Director 
+                                    a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
+                                    span.subtext Creative Director
+        
+        
         section#fh5co-services(data-section='services')
             .container
-                .row.to-animate
+                .row
                     .col-md-12.section-heading.text-center
                         h2.center-border.to-animate Download My CV
                             br
-                        span.btn.btn-lg.to-animate(href='http://github.com/criewaldt', target='_blank') PDF
-                        span.btn.btn-lg.to-animate(href='http://github.com/criewaldt', target='_blank') Word
-                .row.text-center.to-animate
+                        span.btn.btn-lg(href='http://github.com/criewaldt', target='_blank') PDF
+                        span.btn.btn-lg(href='http://github.com/criewaldt', target='_blank') Word
+                .row.text-center
                     p I'm currently looking for new development opportunities!
                                     
         
@@ -264,7 +306,7 @@ html
                     .col-md-3.col-sm-6.col-xs-12
                         .fh5co-counter.to-animate
                             i.fh5co-counter-icon.icon-briefcase.to-animate-2
-                            span.fh5co-counter-number.js-counter(data-from='0', data-to='14', data-speed='5000', data-refresh-interval='50') 14
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='12', data-speed='5000', data-refresh-interval='50') 12
                             span.fh5co-counter-label GitHub Repositories
                     .col-md-3.col-sm-6.col-xs-12
                         .fh5co-counter.to-animate
@@ -283,54 +325,114 @@ html
                             span.fh5co-counter-label Happy clients
         
         
-        section#fh5co-about(data-section='more')
+        section#fh5co-about(data-section='about')
             .container
                 .row
                     .col-md-12.section-heading.text-center
-                        h2.to-animate Ok, but who am I?
+                        h2.to-animate About Me
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3 I'm goofy when appropriate, focused when needed, but always determined to solve problems. 
                                     | I enjoy taking things apart and putting them back together. My curiosity and creativity drive my interests in technology, art, and the quest for knowledge.
                 .row
-                    .col-md-12
+                    .col-md-4
                         .fh5co-person.text-center.to-animate
                             figure
-                                img(src='images/chrisr.jpg', alt='ChrisR')
-                            h3 Chris Riewaldt
-                            span.fh5co-position A person on earth
+                                img(src='images/person1.jpg', alt='Image')
+                            h3 Jean Smith
+                            span.fh5co-position Web Designer
                             p
-                                | Check me out on instagram. I take photos because why not?!!
+                                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
                             ul.social.social-circle
                                 li
-                                    a(href='https://www.instagram.com/criewaldt/')
-                                        i.icon-instagram
-                    
+                                    a(href='#')
+                                        i.icon-twitter
+                                li
+                                    a(href='#')
+                                        i.icon-facebook
+                                li
+                                    a(href='#')
+                                        i.icon-dribbble
+                    .col-md-4
+                        .fh5co-person.text-center.to-animate
+                            figure
+                                img(src='images/person2.jpg', alt='Image')
+                            h3 Rob Smith
+                            span.fh5co-position Web Developer
+                            p
+                                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                            ul.social.social-circle
+                                li
+                                    a(href='#')
+                                        i.icon-twitter
+                                li
+                                    a(href='#')
+                                        i.icon-facebook
+                                li
+                                    a(href='#')
+                                        i.icon-github
+                    .col-md-4
+                        .fh5co-person.text-center.to-animate
+                            figure
+                                img(src='images/person3.jpg', alt='Image')
+                            h3 Larry Ben
+                            span.fh5co-position Web Designer
+                            p
+                                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                            ul.social.social-circle
+                                li
+                                    a(href='#')
+                                        i.icon-twitter
+                                li
+                                    a(href='#')
+                                        i.icon-facebook
+                                li
+                                    a(href='#')
+                                        i.icon-dribbble
         
         section#fh5co-contact(data-section='contact')
             .container
                 .row
                     .col-md-12.section-heading.text-center
                         h2.to-animate Get In Touch
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3
+                                    | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                 .row.row-bottom-padded-md
                     .col-md-6.to-animate
-                        h3 Contact & Location
+                        h3 Contact Info
                         ul.fh5co-contact-info
                             li.fh5co-contact-address
                                 i.icon-home
-                                | New York, NY
+                                | 5555 Love Paradise 56 New Clity 5655, 
                                 br
-                                | Charleston, SC
+                                | Excel Tower United Kingdom
                             li
                                 i.icon-phone
-                                |  (347) 813-1936
+                                |  (123) 465-6789
                             li
                                 i.icon-envelope
-                                | criewaldt@gmail.com
-                    .col-md-6.subtext.to-animate
-                        h3
-                        | Send a text message for the fastest response.
-                    
+                                | info@freehtml5.co
+                            li
+                                i.icon-globe
+                                a(href='http://freehtml5.co/', target='_blank') freehtml5.co
+                    .col-md-6.to-animate
+                        h3 Contact Form
+                        .form-group
+                            label.sr-only(for='name') Name
+                            input#name.form-control(placeholder='Name', type='text')
+                        .form-group
+                            label.sr-only(for='email') Email
+                            input#email.form-control(placeholder='Email', type='email')
+                        .form-group
+                            label.sr-only(for='phone') Phone
+                            input#phone.form-control(placeholder='Phone', type='text')
+                        .form-group
+                            label.sr-only(for='message') Message
+                            textarea#message.form-control(name='', cols='30', rows='5', placeholder='Message')
+                        .form-group
+                            input.btn.btn-primary.btn-lg(value='Send Message', type='submit')
         footer#footer(role='contentinfo')
             a.gotop.js-gotop(href='#')
                 i.icon-arrow-up2

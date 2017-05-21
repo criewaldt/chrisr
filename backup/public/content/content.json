@@ -1,0 +1,25 @@
+{
+    "myWork": [
+        {
+            "img": [{
+                "src": "images/esb.jpg",
+                "alt": "http://www.ExchangeStreetBarber.com"
+                }
+            ],
+            "title": "ExchangeStreetBarber.com",
+            "description": "A business homepage with 24/7 Booking via Vagaro: Node/Express on Heroku"
+        },
+        {
+            "img": [{
+                "src": "images/advertapi.jpg",
+                "alt": "http://www.AdvertAPI.com"
+                }
+            ],
+            "title": "AdvertAPI.com",
+            "description": "An advertising platform for real estate agents: Python/Flask with AWS DynamoDB & Lambda on PythonAnywhere"
+        }
+        
+        
+    ],
+    "otherstuff": "other stuff"
+}
