@@ -72,7 +72,8 @@ html
         section#fh5co-intro
             .container
                 .row.row-bottom-padded-lg
-                    .fh5co-block.to-animate(style='background-image: url(images/img_8.jpg);')
+                
+                    .fh5co-block.to-animate(style='background-image: url(images/parse.jpg);')
                         .overlay-darker
                         .overlay
                         .fh5co-text
@@ -83,27 +84,32 @@ html
                                 | Python, NodeJS, Amazon Web Service, SQL & NoSQL, API creation, data structures, and more.
                             p
                                 a.btn.btn-primary(href='https://github.com/criewaldt') My GitHub
-                    .fh5co-block.to-animate(style='background-image: url(images/img_7.jpg);')
+                                br
+                    .fh5co-block.to-animate(style='background-image: url(images/linkedin.jpg);')
                         .overlay-darker
                         .overlay
                         .fh5co-text
                             i.fh5co-intro-icon.icon-briefcase
+                            h2 My CV
+                            p
+                                | A snapshot of my technical skillset and professional experience.
+                            p
+                                a.btn.btn-primary(href='#cv') Download PDF
+                                br
+                    .fh5co-block.to-animate(style='background-image: url(images/realestate.jpg);')
+                        .overlay-darker
+                        .overlay
+                        .fh5co-text
+                            i.fh5co-intro-icon.icon-home
                             h2 Real Estate
                             p
                                 | Licensed real estate salesperson in New York, Connecticut, Georgia, Oklahoma, Pennsylvania, and West Virginia.
                                 | Practicing since 2010.
                             p
                                 a.btn.btn-primary(href='http://nyls.net/?page=agents&id=79') My Active Listings
-                    .fh5co-block.to-animate(style='background-image: url(images/img_10.jpg);')
-                        .overlay-darker
-                        .overlay
-                        .fh5co-text
-                            i.fh5co-intro-icon.glyphicon.glyphicon-screenshot
-                            h2 Gaming
-                            p
-                                | When I have time, I love to play and record games. Watch me go Rambo on randos via Plays.TV.
-                            p
-                                a.btn.btn-primary(href='http://plays.tv/u/baeTheLegend') My Plays.TV
+                                br
+                                
+    
                 //.row.watch-video.text-center.to-animate
                 //    span Watch the video
                 //    a.popup-vimeo.btn-video(href='https://vimeo.com/channels/staffpicks/93951774')
@@ -118,20 +124,52 @@ html
                                 h3
                                     | Just a few things I've created or contributed to.
                 .row.row-bottom-padded-sm
-                    for item in work
+                    .row
                         .col-md-4.col-sm-6.col-xxs-12
-                            a.fh5co-project-item.image-popup.to-animate(href=item.img[0].src)
-                                img.img-responsive(src=item.img[0].src, alt=item.img[0].alt)
+                            a.fh5co-project-item.image-popup.to-animate(href="images/esb.jpg")
+                                img.img-responsive(src="images/esb.jpg", alt="ExchangeStreetBarber.com")
                                 .fh5co-text
-                                    h2= item.title
-                                    span= item.description
-                                .clearfix.visible-sm-block
-                    
-                    
-                .row
-                    .col-md-12.text-center.to-animate 
-                        a(href='http://github.com/criewaldt', target='_blank') 
-                            i.icon-github
+                                    h2 ExchangeStreetBarber.com
+                                    br
+                                    span A barbershop business homepage with 24/7 Booking via Vagaro: Node/Express on Heroku
+                        .col-md-4.col-sm-6.col-xxs-12
+                            a.fh5co-project-item.image-popup.to-animate(href="images/advertapi.jpg")
+                                img.img-responsive(src="images/advertapi.jpg", alt="AdvertAPI.com")
+                                .fh5co-text
+                                    h2 AdvertAPI.com
+                                    br
+                                    span An advertising platform for real estate agents: Python/Flask with AWS DynamoDB & Lambda on PythonAnywhere
+                        .col-md-4.col-sm-6.col-xxs-12
+                            a.fh5co-project-item.image-popup.to-animate(href="images/chrisriewaldt.jpg")
+                                img.img-responsive(src="images/chrisriewaldt.jpg", alt="ChrisRiewaldt.com")
+                                .fh5co-text
+                                    h2 ChrisRiewaldt.com (This website)
+                                    br
+                                    span A website about me: Node/Express on Heroku
+                    .row
+                        .col-md-4.col-sm-6.col-xxs-12
+                            a.fh5co-project-item.image-popup.to-animate(href="images/quantipoll.jpg")
+                                img.img-responsive(src="images/quantipoll.jpg", alt="QuantiPoll.com")
+                                .fh5co-text
+                                    h2 QuantiPoll.com
+                                    br
+                                    span A place for questions and answers: Node/Express, Sequelize, Postgres, on Heroku
+                        .col-md-4.col-sm-6.col-xxs-12
+                            a.fh5co-project-item.image-popup.to-animate(href="images/parse.jpg")
+                                img.img-responsive(src="images/parse.jpg", alt="PARSE")
+                                .fh5co-text
+                                    h2 PARSE
+                                    br
+                                    span A barebones, session-ready stack for Heroku testing & whatever else: Node/Express, Postgres, Angular, Redis, Session, and SocketIO
+                        .col-md-4.col-sm-6.col-xxs-12
+                            a.fh5co-project-item.image-popup.to-animate(href="images/refreshlambda.jpg")
+                                img.img-responsive(src="images/refreshlambda.jpg", alt="NakedApts-AdvertRefresh-Lambda ")
+                                .fh5co-text
+                                    h2 NakedApts-AdvertRefresh-Lambda 
+                                    br
+                                    span AWS Lambda to repost NakedApartments ads syndicated from RealtyMX real estate IDX platform, called by AWS API gateway via POST request: Python, AWS Lambda/DynamoDB/API Gateway
+                    .row.text-center.to-animate
+                        p And more...
         section#fh5co-testimonials(data-section='testimonials')
             .container
                 .row
@@ -313,6 +351,9 @@ html
                     .col-md-12.section-heading.text-center
                         h2.to-animate Get In Touch
                 .row.row-bottom-padded-md
+                    .col-md-6.subtext.to-animate
+                        h3
+                        | Send a text message for the fastest response.
                     .col-md-6.to-animate
                         h3 Contact & Location
                         ul.fh5co-contact-info
@@ -327,9 +368,7 @@ html
                             li
                                 i.icon-envelope
                                 | criewaldt@gmail.com
-                    .col-md-6.subtext.to-animate
-                        h3
-                        | Send a text message for the fastest response.
+                    
                     
         footer#footer(role='contentinfo')
             a.gotop.js-gotop(href='#')

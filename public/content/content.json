@@ -17,7 +17,26 @@
             ],
             "title": "AdvertAPI.com",
             "description": "An advertising platform for real estate agents: Python/Flask with AWS DynamoDB & Lambda on PythonAnywhere"
+        },
+        {
+            "img": [{
+                "src": "images/chrisriewaldt.jpg",
+                "alt": "http://www.ChrisRiewaldt.com"
+                }
+            ],
+            "title": "ChrisRiewaldt.com (This website)",
+            "description": "A website about me: Node/Express on Heroku"
+        },
+        {
+            "img": [{
+                "src": "images/quantipoll.jpg",
+                "alt": "http://www.ChrisRiewaldt.com"
+                }
+            ],
+            "title": "QuentiPoll.com",
+            "description": "A place for questions and answers: Node/Express, Sequelize, Postgres, on Heroku"
         }
+        
         
         
     ],
