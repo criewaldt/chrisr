@@ -34,7 +34,7 @@ html
                 nav.navbar.navbar-default
                     .navbar-header
                         // Mobile Toggle Menu Button
-                        a.js-fh5co-nav-toggle.fh5co-nav-toggle(href='#', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                        a.js-fh5co-nav-toggle.fh5co-nav-toggle(style="margin-top:15px;", href='#', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
                             i
                         a.navbar-brand(href='index.html') ChrisRiewaldt.com
                     #navbar.navbar-collapse.collapse
@@ -66,16 +66,8 @@ html
                         .row
                             .col-md-8.col-md-offset-2
                                 h1.to-animate Chris Riewaldt
-                                h2.to-animate 
-                                    | Computer Nerd
-                                    br
-                                    | Artist 
-                                    br
-                                    | Real Estate Salesperson 
-                                    br
-                                    | Gamer 
-                                    br
-                                    | Coffee Addict 
+                                h2.to-animate
+                                    | I like to break things, and make things.
             .slant
         section#fh5co-intro
             .container
@@ -126,69 +118,21 @@ html
                                 h3
                                     | Just a few things I've created or contributed to.
                 .row.row-bottom-padded-sm
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_1.jpg')
-                            img.img-responsive(src='images/esb.jpg', alt='http://www.ExchangeStreetBarber.com')
-                            .fh5co-text
-                                h2 ExchangeStreetBarber.com
-                                span A business homepage with 24/7 Booking via Vagaro: Node/Express on Heroku
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_2.jpg')
-                            img.img-responsive(src='images/advertapi.jpg', alt='http://www.AdvertAPI.com')
-                            .fh5co-text
-                                h2 AdvertAPI.com
-                                span An advertising platform for real estate agents: Python/Flask with AWS DynamoDB & Lambda on PythonAnywhere
-                    .clearfix.visible-sm-block
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_3.jpg')
-                            img.img-responsive(src='images/work_3.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 3
-                                span Web
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_4.jpg')
-                            img.img-responsive(src='images/work_4.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 4
-                                span UI/UX
-                    .clearfix.visible-sm-block
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_5.jpg')
-                            img.img-responsive(src='images/work_5.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 1
-                                span Photography
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_6.jpg')
-                            img.img-responsive(src='images/work_6.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 2
-                                span Illustration
-                    .clearfix.visible-sm-block
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_7.jpg')
-                            img.img-responsive(src='images/work_7.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 3
-                                span Web
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_8.jpg')
-                            img.img-responsive(src='images/work_8.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 4
-                                span Sketch
-                    .clearfix.visible-sm-block
-                    .col-md-4.col-sm-6.col-xxs-12
-                        a.fh5co-project-item.image-popup.to-animate(href='images/work_1.jpg')
-                            img.img-responsive(src='images/work_1.jpg', alt='Image')
-                            .fh5co-text
-                                h2 Project 2
-                                span Illustration
+                    for item in work
+                        .col-md-4.col-sm-6.col-xxs-12
+                            a.fh5co-project-item.image-popup.to-animate(href=item.img[0].src)
+                                img.img-responsive(src=item.img[0].src, alt=item.img[0].alt)
+                                .fh5co-text
+                                    h2= item.title
+                                    span= item.description
+                                .clearfix.visible-sm-block
+                    
+                    
                 .row
                     .col-md-12.text-center.to-animate
                         p
-                            | * Demo images from 
-                            a(href='http://plmd.me/', target='_blank') plmd.me
+                            | Take a look at my 
+                            a(href='http://github.com/criewaldt', target='_blank') GitHub
         section#fh5co-testimonials(data-section='testimonials')
             .container
                 .row
@@ -199,18 +143,6 @@ html
                                 p
                                 | Motivated, self-taught, full-stack scripter with a portfolio of software designed to collect, analyze, and share data, automate business processes, and more.
                                 | Proven success building, testing, deploying, and supporting projects to solve complex problems with simple, effective software.
-                        .row
-                            .col-md-8.col-md-offset-2.subtext.to-animate
-                                br
-                                h3 Experience with: 
-                                    strong Python
-                                    |, 
-                                    strong JavaScript
-                                    |, 
-                                    strong Node.JS
-                                    |, 
-                                    strong Amazon Web Service
-                                    |, REST, JSON, SQL & NoSQL, Heroku, Web Scraping, and more.
                 .row
                     .col-md-12.section-heading.text-center
                         h2.to-animate Mission
@@ -228,57 +160,74 @@ html
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 strong Languages, Frameworks, and Services
-                                p Python 2/3, JavaScript, Node.JS, Amazon Web Service
+                                p Python, JavaScript, Node.JS, Amazon Web Service, RESTful API, GitHub
                         .row    
                             .col-md-8.col-md-offset-2.subtext.to-animate
-                                strong Database
-                                p SQL & NoSQL, SQLite, DynamoDB, Postgres
+                                strong Data
+                                p SQL, NoSQL, JSON
+                                    br
+                                    | SQLite, DynamoDB, Postgres
+                        .row    
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                strong Notable Libraries
+                                br
+                                p Node.JS, Express, Flask, Requests, BeautifulSoup, boto3, SocketIO, Angular.JS
                 .row
                     .col-md-12.section-heading.text-center
                         h2.to-animate Professional Experience
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
+                                h3 AdvertAPI.com
+                                    br
+                                    small June 2015 to Present
+                                h4 Owner and Developer
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                small A web-app to automate advertising via 3rd party NakedApartments.com SDK.
+                                br
+                                br
+                                small Over 3 million ads published.
+                                hr
+                        .row
+                            .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3 New York Living Solutions – New York, NY
                                     br
-                                    | Sept. 2016 to Present
+                                    small Sept. 2016 to Present
                                     br
-                                    | Feb. 2010 to June 2014
+                                    small Feb. 2010 to June 2014
                                 h4 Licensed Real Estate Salesperson
                                     br
                                     | Listings Manager (*Previous)
-                            .col-md-8.col-md-offset-2.subtext.to-animate.text-left 
+                            .col-md-8.col-md-offset-2.subtext.to-animate
+                                small Created custom software specifically for NYLS to increase lead generation,
+                                    | automated advertising and marketing, and data aggregation and analysis.
+                                br
+                                br
                                 small Continually provide sales and technical support for 40+ agents. 
                                 hr
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3 Douglas Elliman Real Estate - New York, NY
                                     br
-                                    | June 2014 to Jan. 2016
+                                    small June 2014 to Jan. 2016
                                 h4 Licensed Real Estate Salesperson
                                     br
                                     | P.A. to Jeremiah LoRusso – The LoRusso Team
-                            .col-md-8.col-md-offset-2.subtext.to-animate.text-left
+                            .col-md-8.col-md-offset-2.subtext.to-animate
                                 small Douglas Elliman Chairman’s Gold Award Winner (2014, 2015)
                                 br
                                 br
                                 small Consistently exceeded sales and operations goals set by Douglas Elliman and The LoRusso Team. 
                                 br
                                 br
-                                small Integral to the exponential rise in commission generated for The LoRusso Team from 2014 through 2015.
-                                br
-                                br
-                                small Trained and provided continued support to all new hires on the LoRusso Team regardless of prior real estate experience or training.
-                                br
-                                br
-                                small Created and customized software specifically for the LoRusso Team for lead generation,
-                                    | automated advertising and marketing, social media outreach, and data aggregation and analysis.
+                                small Created and customized software specifically for the LoRusso Team to increase lead generation,
+                                    | automated advertising and marketing, and data aggregation and analysis.
                                 br
                                 br
                                 small Worked directly with the Executive Vice President & Head of Rentals to develop  
                                     | tools to gather and analyze real estate listing data in real-time.
                                 br
                                 br
-                                small Offered Team Leader position within Douglas Elliman Real Estate
+                                small Offered Team Leader position within Douglas Elliman Real Estate.
                                         
                 .row
                     .col-md-12.section-heading.text-center
@@ -286,12 +235,13 @@ html
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3 Onondaga Community College - Syracuse, NY
-                                h4 Music Performance: 2004-2006 (Not Graduated)
+                                h4 BA - Music Performance: 2004 to 2006 (Incomplete)
                                 hr
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3 Amherst Regional High School
                                 h4 Class of 2002
+            
                 .row
                     .col-md-4
                         .box-testimony
@@ -329,6 +279,33 @@ html
                                     | Chris Nash, Director 
                                     a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
                                     span.subtext Creative Director
+        section#fh5co-counters(style='background-image: url(images/full_image_1.jpg);', data-stellar-background-ratio='0.5')
+            .fh5co-overlay
+            .container
+                .row
+                    .col-md-12.section-heading.text-center.to-animate
+                        h2 Fun Facts
+                .row
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-briefcase.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='12', data-speed='5000', data-refresh-interval='50') 12
+                            span.fh5co-counter-label GitHub Repositories
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-code.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='1500000', data-to='3000000', data-speed='5000', data-refresh-interval='50') 2343409
+                            span.fh5co-counter-label New ads created via SDK
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-cup.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='1302', data-speed='5000', data-refresh-interval='50') 1302
+                            span.fh5co-counter-label Cup of coffees
+                    .col-md-3.col-sm-6.col-xs-12
+                        .fh5co-counter.to-animate
+                            i.fh5co-counter-icon.icon-people.to-animate-2
+                            span.fh5co-counter-number.js-counter(data-from='0', data-to='52', data-speed='5000', data-refresh-interval='50') 52
+                            span.fh5co-counter-label Happy clients
         section#fh5co-services(data-section='services')
             .container
                 .row
@@ -424,33 +401,7 @@ html
                                 li
                                     a(href='#')
                                         i.icon-dribbble
-        section#fh5co-counters(style='background-image: url(images/full_image_1.jpg);', data-stellar-background-ratio='0.5')
-            .fh5co-overlay
-            .container
-                .row
-                    .col-md-12.section-heading.text-center.to-animate
-                        h2 Fun Facts
-                .row
-                    .col-md-3.col-sm-6.col-xs-12
-                        .fh5co-counter.to-animate
-                            i.fh5co-counter-icon.icon-briefcase.to-animate-2
-                            span.fh5co-counter-number.js-counter(data-from='0', data-to='89', data-speed='5000', data-refresh-interval='50') 89
-                            span.fh5co-counter-label Finished projects
-                    .col-md-3.col-sm-6.col-xs-12
-                        .fh5co-counter.to-animate
-                            i.fh5co-counter-icon.icon-code.to-animate-2
-                            span.fh5co-counter-number.js-counter(data-from='0', data-to='2343409', data-speed='5000', data-refresh-interval='50') 2343409
-                            span.fh5co-counter-label Line of codes
-                    .col-md-3.col-sm-6.col-xs-12
-                        .fh5co-counter.to-animate
-                            i.fh5co-counter-icon.icon-cup.to-animate-2
-                            span.fh5co-counter-number.js-counter(data-from='0', data-to='1302', data-speed='5000', data-refresh-interval='50') 1302
-                            span.fh5co-counter-label Cup of coffees
-                    .col-md-3.col-sm-6.col-xs-12
-                        .fh5co-counter.to-animate
-                            i.fh5co-counter-icon.icon-people.to-animate-2
-                            span.fh5co-counter-number.js-counter(data-from='0', data-to='52', data-speed='5000', data-refresh-interval='50') 52
-                            span.fh5co-counter-label Happy clients
+        
         section#fh5co-contact(data-section='contact')
             .container
                 .row
@@ -466,7 +417,7 @@ html
                         ul.fh5co-contact-info
                             li.fh5co-contact-address
                                 i.icon-home
-                                | 							5555 Love Paradise 56 New Clity 5655, 
+                                | 5555 Love Paradise 56 New Clity 5655, 
                                 br
                                 | Excel Tower United Kingdom
                             li
@@ -494,7 +445,6 @@ html
                             textarea#message.form-control(name='', cols='30', rows='5', placeholder='Message')
                         .form-group
                             input.btn.btn-primary.btn-lg(value='Send Message', type='submit')
-            #map.to-animate
         footer#footer(role='contentinfo')
             a.gotop.js-gotop(href='#')
                 i.icon-arrow-up2
@@ -502,53 +452,9 @@ html
                 div
                     .col-md-12.text-center
                         p
-                            | © Elate Free HTML5. All Rights Reserved. 
-                            br
-                            | Created by 
-                            a(href='http://freehtml5.co/', target='_blank') FREEHTML5.co
-                            |  Images: 
-                            a(href='http://pexels.com/', target='_blank') Pexels
-                            | , 
-                            a(href='http://plmd.me/', target='_blank') plmd.me
-                .row
-                    .col-md-12.text-center
-                        ul.social.social-circle
-                            li
-                                a(href='#')
-                                    i.icon-twitter
-                            li
-                                a(href='#')
-                                    i.icon-facebook
-                            li
-                                a(href='#')
-                                    i.icon-youtube
-        // For demo purposes Only ( You may delete this anytime :-)
-        #colour-variations
-            a.option-toggle
-                i.icon-gear
-            h3 Preset Colors
-            ul
-                li
-                    a(href='javascript: void(0);', data-theme='style')
-                        span(style='background: #3f95ea;')
-                        span(style='background: #52d3aa;')
-                        span(style='background: #f2f2f2;')
-                li
-                    a(href='javascript: void(0);', data-theme='style2')
-                        span(style='background: #329998;')
-                        span(style='background: #6cc99c;')
-                        span(style='background: #f2f2f2;')
-                li
-                    a(href='javascript: void(0);', data-theme='style3')
-                        span(style='background: #9f466e;')
-                        span(style='background: #c24d67;')
-                        span(style='background: #f2f2f2;')
-                li
-                    a(href='javascript: void(0);', data-theme='style4')
-                        span(style='background: #21825C;')
-                        span(style='background: #A4D792;')
-                        span(style='background: #f2f2f2;')
-        // End demo purposes only
+                            | © ChrisRiewaldt.com
+
+        
         // jQuery
         script(src='js/jquery.min.js')
         // jQuery Easing
