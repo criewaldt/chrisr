@@ -13,11 +13,9 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 
 
-var content = require('./public/content/content.json');
-
 // index view
 app.get('/', function(req, res) {
-    res.render('index', {work:content.myWork});
+    res.render('index');
 });
 
 // 404 for any page that doesnt exist - This goes after all other views
