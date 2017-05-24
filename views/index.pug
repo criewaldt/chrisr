@@ -150,19 +150,21 @@ html
                                 h3
                                     | Just a few things I've created or contributed to:
                 .row
-                    .col-md-8.col-md-offset-2.text-center.well.to-animate
-                        h4 Sample API - Sum two numbers
-                        .input-group
-                            span(class="input-group-addon" id="basic-addon1") Input a number
-                            input(type="text" class="form-control" id="num1" placeholder="number")
-                        br
-                        .input-group
-                            span(class="input-group-addon" id="basic-addon2") Input another number
-                            input(type="text" class="form-control" id="num2" placeholder="number")
-                        br
-                        h4(id="answer")
-                        button(class="btn btn-success" onclick="addApi();") Submit
-                    .col-md-8.col-md-offset-2.well-inverted.to-animate
+                    .container
+                        .col-md-6.col-md-offset-3.text-center.well.to-animate
+                            h4 Sample API - Sum two numbers
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon1") Input a number
+                                input(type="text" class="form-control" id="num1" placeholder="number")
+                            br
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon2") Input another number
+                                input(type="text" class="form-control" id="num2" placeholder="number")
+                            br
+                            h4(id="answer")
+                            button(class="btn btn-success" onclick="addApi();") Submit
+                .row
+                    .col-md-8.col-md-offset-2.to-animate
                         include code.html
                 br       
                 .row.row-bottom-padded-sm

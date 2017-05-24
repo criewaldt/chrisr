@@ -26,7 +26,7 @@ app.post('/api/add', function(req, res) {
     
     if ( (!isNaN(req.body.num1)) && (!isNaN(req.body.num2)) ) {
         //if both params are numbers => num1 + num2
-        res.json({msg: "The answer is: " + Number(req.body.num1) + Number(req.body.num2)});
+        res.json({msg: "The answer is: " + (Number(req.body.num1) + Number(req.body.num2))});
     } else {
         res.json({msg:"Looks like you included a non-number... try again."});
     }
