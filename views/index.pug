@@ -46,6 +46,13 @@ html
         // FOR IE9 below
         //if lt IE 9
             script(src='js/respond.min.js')
+            
+        //code prettify
+        script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert")
+        
+        //chrisr.js
+        script(src='js/chrisr.js')
+        
     body
         header#fh5co-header(role='banner')
             .container
@@ -141,7 +148,23 @@ html
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3
-                                    | Just a few things I've created or contributed to.
+                                    | Just a few things I've created or contributed to:
+                .row
+                    .col-md-8.col-md-offset-2.text-center.well.to-animate
+                        h4 Sample API - Sum two numbers
+                        .input-group
+                            span(class="input-group-addon" id="basic-addon1") Input a number
+                            input(type="text" class="form-control" id="num1" placeholder="number")
+                        br
+                        .input-group
+                            span(class="input-group-addon" id="basic-addon2") Input another number
+                            input(type="text" class="form-control" id="num2" placeholder="number")
+                        br
+                        h4(id="answer")
+                        button(class="btn btn-success" onclick="addApi();") Submit
+                    .col-md-8.col-md-offset-2.well-inverted.to-animate
+                        include code.html
+                br       
                 .row.row-bottom-padded-sm
                     .container
                         .row
