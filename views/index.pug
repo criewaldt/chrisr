@@ -148,11 +148,12 @@ html
                         .row
                             .col-md-8.col-md-offset-2.subtext.to-animate
                                 h3
-                                    | Just a few things I've created or contributed to:
+                                    | Just a few things I've created:
                 .row
                     .container
                         .col-md-6.col-md-offset-3.text-center.well.to-animate
                             h4 Example API 1: Sum two numbers
+                            p(style="color:black") Input two numbers and the server will sum them and display the results.
                             .input-group
                                 span(class="input-group-addon" id="basic-addon1") Input a number
                                 input(type="text" class="form-control" id="num1" placeholder="number")
@@ -166,7 +167,8 @@ html
                             .row
                                 .col-sm-6
                                     button(class="btn btn-success" onclick="addApi();") Submit
-                                br
+                                    br
+                                    br
                                 .col-sm-6
                                     button(class="btn btn-info" data-toggle="modal" data-target="#sumApi") View Code
                                     
@@ -175,6 +177,7 @@ html
                     .container
                         .col-md-6.col-md-offset-3.text-center.well.to-animate
                             h4 Example API 2: - Count Word Frequency via AWS Lambda
+                            p(style="color:black") Input a URL and the server will call AWS Lambda to count the frequency of words and display the results.
                             .input-group
                                 span(class="input-group-addon" id="basic-addon1") Input a URL
                                 input(type="text" class="form-control" id="url" placeholder="http://www.somewhere.com")
@@ -182,12 +185,13 @@ html
                             .row
                                 #wordloader.hidden
                                     img(src="./images/loader.gif")
-                                    h4 Loading...
+                                    p(style="color:black") Loading... this may take a minute.
                                 h4(id="wordResult")
                             .row
                                 .col-sm-6
                                     button(class="btn btn-success" onclick="wordApi();") Submit
-                                br
+                                    br
+                                    br
                                 .col-sm-6
                                     button(class="btn btn-info" data-toggle="modal" data-target="#wordApi") View Code
                 br       

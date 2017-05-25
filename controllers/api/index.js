@@ -13,7 +13,7 @@ router.post('/words', function(req, res) {
         if (!err) {
             res.json({error:false, data:JSON.parse(body)});
         } else {
-            res.json({error:true, msg:err, data:null});
+            res.end();
         }
     });
 });

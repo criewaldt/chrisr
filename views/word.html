@@ -1,16 +1,18 @@
 <pre class="prettyprint">
 
 //server.js
+//load my AWS endpoints and request package
+var awsEndpoints = require('../../creds.json');
 var request = require('request');
-router.post('/wordfrequency', function(req, res) {
+router.post('/words', function(req, res) {
     var formData = {
         "url": req.body.url
     };
-    request.post({url: "https://my.aws.endpoint", form: JSON.stringify(formData)}, function (err, httpResponse, body) {
+    request.post({url: process.env.WordFrequency || awsEndpoints.wordFrequency, form: JSON.stringify(formData)}, function (err, httpResponse, body) {
         if (!err) {
             res.json({error:false, data:JSON.parse(body)});
         } else {
-            res.json({error:true, msg:err, data:null});
+            res.end();
         }
     });
 });
