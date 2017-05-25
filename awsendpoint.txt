@@ -1,1 +1,0 @@
-https://6xlm3ba4hk.execute-api.us-east-1.amazonaws.com/beta

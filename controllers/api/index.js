@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var awsEndpoints = require('../../creds.json');
+
+try { var awsEndpoints = require('../../creds.json'); }
+catch (error) { console.log(error); }
 
 router.post('/wordfrequency', function(req, res) {
     var formData = {
         "url": req.body.url
     };
-    request.post({url:awsEndpoints.wordFrequency, form: JSON.stringify(formData)}, function (err, httpResponse, body) {
+    request.post({url:awsEndpoints.wordFrequency || process.env.WordFrequency, form: JSON.stringify(formData)}, function (err, httpResponse, body) {
         if (!err) {
             res.json({error:false, data:JSON.parse(body)});
         } else {
