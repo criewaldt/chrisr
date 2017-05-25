@@ -1,20 +1,21 @@
-//chrisr.js
+<pre class="prettyprint">
 
-function addApi() {
-    var data = {
-        num1: document.getElementById("num1").value,
-        num2: document.getElementById("num2").value
-        };
-    $.ajax({
-        type: "POST",
-        url: '/api/add',
-        data: data,
-        success: function(result) {
-            document.getElementById("sumResult").innerHTML = result.msg;
+//server.js
+var request = require('request');
+router.post('/wordfrequency', function(req, res) {
+    var formData = {
+        "url": req.body.url
+    };
+    request.post({url: "https://my.aws.endpoint", form: JSON.stringify(formData)}, function (err, httpResponse, body) {
+        if (!err) {
+            res.json({error:false, data:JSON.parse(body)});
+        } else {
+            res.json({error:true, msg:err, data:null});
         }
     });
-}
+});
 
+//client.js
 function wordApi() {
     //show loader
     $("#wordloader").removeClass('hidden');
@@ -28,6 +29,7 @@ function wordApi() {
         url: '/api/words',
         data: data,
         success: function(result) {
+            //hide loader
             $("#wordloader").addClass('hidden');
             document.getElementById("wordResult").innerHTML = "URL: <strong>"+ data.url + "</strong><br><br>" +
                 "Total words: <strong>" + result.data.count.total +
@@ -38,8 +40,4 @@ function wordApi() {
     });
     
 }
-
-$( document ).ready(function() {
-    //do something
-    
-});
+</pre>

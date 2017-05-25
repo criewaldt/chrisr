@@ -152,7 +152,7 @@ html
                 .row
                     .container
                         .col-md-6.col-md-offset-3.text-center.well.to-animate
-                            h4 Sample API - Sum two numbers
+                            h4 Example API: Sum two numbers
                             .input-group
                                 span(class="input-group-addon" id="basic-addon1") Input a number
                                 input(type="text" class="form-control" id="num1" placeholder="number")
@@ -161,11 +161,33 @@ html
                                 span(class="input-group-addon" id="basic-addon2") Input another number
                                 input(type="text" class="form-control" id="num2" placeholder="number")
                             br
-                            h4(id="answer")
-                            button(class="btn btn-success" onclick="addApi();") Submit
+                            .row
+                                h4(id="sumResult")
+                            .row
+                                .col-sm-6
+                                    button(class="btn btn-success" onclick="addApi();") Submit
+                                .col-sm-6
+                                    button(class="btn btn-info" data-toggle="modal" data-target="#sumApi") View Code
+                                    
+
                 .row
-                    .col-md-8.col-md-offset-2.to-animate
-                        include code.html
+                    .container
+                        .col-md-6.col-md-offset-3.text-center.well.to-animate
+                            h4 Example API: - Count Word Frequency via AWS Lambda
+                            .input-group
+                                span(class="input-group-addon" id="basic-addon1") Input a web address
+                                input(type="text" class="form-control" id="url" placeholder="http://www.somewhere.com")
+                            br
+                            .row
+                                #wordloader.hidden
+                                    img(src="./images/loader.gif")
+                                    h4 Loading...
+                                h4(id="wordResult")
+                            .row
+                                .col-sm-6
+                                    button(class="btn btn-success" onclick="wordApi();") Submit
+                                .col-sm-6
+                                    button(class="btn btn-info" data-toggle="modal" data-target="#wordApi") View Code
                 br       
                 .row.row-bottom-padded-sm
                     .container
@@ -427,6 +449,35 @@ html
                     .col-md-12.text-center
                         p
                             | © ChrisRiewaldt.com
+        
+        //modals
+        #sumApi.modal.fade(role='dialog')
+            .modal-dialog
+                // Modal content
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') ×
+                        h4.modal-title Example API: Sum two numbers
+                    .modal-body
+                        include sum.html
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+        #wordApi.modal.fade(role='dialog')
+            .modal-dialog
+                // Modal content
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') ×
+                        h4.modal-title Example API: Count Word Frequency via AWS Lambda
+                    .modal-body
+                        br
+                        include word.html
+                        br
+                        h4 AWS Lambda code can be found 
+                            a(href="https://github.com/criewaldt/LambdaWordFrequency") here
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
 
         
         // jQuery

@@ -5,7 +5,7 @@ var request = require('request');
 try { var awsEndpoints = require('../../creds.json'); }
 catch (error) { console.log(error); }
 
-router.post('/wordfrequency', function(req, res) {
+router.post('/words', function(req, res) {
     var formData = {
         "url": req.body.url
     };
