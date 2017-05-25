@@ -1,5 +1,4 @@
 <pre class="prettyprint">
-
 //server.js
 //load my AWS endpoints and request package
 var awsEndpoints = require('../../creds.json');
@@ -31,7 +30,6 @@ function wordApi() {
         url: '/api/words',
         data: data,
         success: function(result) {
-            //hide loader
             $("#wordloader").addClass('hidden');
             document.getElementById("wordResult").innerHTML = "URL: <strong>"+ data.url + "</strong><br><br>" +
                 "Total words: <strong>" + result.data.count.total +
