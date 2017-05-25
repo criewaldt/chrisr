@@ -1,6 +1,8 @@
 <pre class="prettyprint">
+// Example API 2: Count word frequency via AWS Lambda
+    
 //server.js
-//load my AWS endpoints and request package
+// load my AWS endpoint, and request package
 var awsEndpoints = require('../../creds.json');
 var request = require('request');
 router.post('/words', function(req, res) {
