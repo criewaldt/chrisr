@@ -13,7 +13,7 @@ router.post('/words', function(req, res) {
         if (!err) {
             res.json({error:false, data:JSON.parse(body)});
         } else {
-            res.end();
+            res.json({error:true, msg:"eh that link didn't work... try again."});
         }
     });
 });
@@ -24,7 +24,7 @@ router.post('/add', function(req, res) {
         //if both params are numbers => num1 + num2
         res.json({msg: "The answer is: " + (Number(req.body.num1) + Number(req.body.num2))});
     } else {
-        res.json({msg:"Looks like you included a non-number... try again."});
+        res.json({msg:"It looks like you included a non-number... try again."});
     }
     
 });

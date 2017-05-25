@@ -22,21 +22,25 @@ function wordApi() {
     var data = {
         url: document.getElementById("url").value
         };
-    
+    //call aws
     $.ajax({
         type: "POST",
         url: '/api/words',
         data: data,
         success: function(result) {
+            //hide loader
             $("#wordloader").addClass('hidden');
-            document.getElementById("wordResult").innerHTML = "URL: <strong>"+ data.url + "</strong><br><br>" +
-                "Total words: <strong>" + result.data.count.total +
-                "</strong>.<br>Total unique words: <strong>" + result.data.count.unique +
-                "</strong>.<br><br>Most used word: <strong>" + result.data.top.word + "</strong> with <strong>" +
-                result.data.top.count + "</strong> instances.";
-        }
+            if (result.data.errorMessage) {
+                document.getElementById("wordResult").innerHTML = "There was an error with that URL... try again.";
+            } else {
+                document.getElementById("wordResult").innerHTML = "URL: <strong>"+ data.url + "</strong><br><br>" +
+                    "Total words: <strong>" + result.data.count.total +
+                    "</strong>.<br>Total unique words: <strong>" + result.data.count.unique +
+                    "</strong>.<br><br>Most used word: <strong>" + result.data.top.word + "</strong> with <strong>" +
+                    result.data.top.count + "</strong> instances.";
+            }
+        }    
     });
-    
 }
 
 $( document ).ready(function() {
