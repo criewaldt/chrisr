@@ -9,7 +9,7 @@ router.post('/words', function(req, res) {
     var formData = {
         "url": req.body.url
     };
-    request.post({url:awsEndpoints.wordFrequency || process.env.WordFrequency, form: JSON.stringify(formData)}, function (err, httpResponse, body) {
+    request.post({url: process.env.WordFrequency || awsEndpoints.wordFrequency, form: JSON.stringify(formData)}, function (err, httpResponse, body) {
         if (!err) {
             res.json({error:false, data:JSON.parse(body)});
         } else {
