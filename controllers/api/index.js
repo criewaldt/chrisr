@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 
 try { var awsEndpoints = require('../../creds.json'); }
-catch (error) { console.log(error); }
+catch (error) { console.log(error); awsEndpoints = {};}
 
 router.post('/words', function(req, res) {
     var formData = {
