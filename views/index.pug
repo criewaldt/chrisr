@@ -151,7 +151,8 @@ html
                                     | Just a few things I've created:
                 .row
                     .container
-                        .col-sm-5.text-center.well.to-animate
+                        .col-sm-4.text-center.well.to-animate
+                            
                             h4 Example API 1: Sum two numbers
                             p(style="color:black") Input two numbers and the server will add them and display the results.
                             .input-group
@@ -173,13 +174,12 @@ html
                                     button(class="btn btn-info" data-toggle="modal" data-target="#sumApi") View Code
                                     
                         .col-sm-2
-
-                        .col-sm-5.text-center.well.to-animate
+                        .col-sm-6.text-center.well.to-animate
                             h4 Example API 2: Count word frequency via AWS Lambda
                             p(style="color:black") Input a URL and AWS Lambda will fetch the page and count the words, then display the results.
                             .input-group
                                 span(class="input-group-addon" id="basic-addon1") Input a URL
-                                input(type="text" class="form-control" id="url" placeholder="http://www.somewhere.com")
+                                input(type="text" class="form-control" id="url" placeholder="http://somewhere.com")
                             br
                             .row
                                 #wordloader.hidden
@@ -193,6 +193,25 @@ html
                                     br
                                 .col-sm-6
                                     button(class="btn btn-info" data-toggle="modal" data-target="#wordApi") View Code
+                    .row
+                        .container
+                            .col-sm-12.text-center.well.to-animate
+                                h4 Example API 3: Is it a palindrome?
+                                p(style="color:black") Input a sequence of characters and the server will tell you if it's a palindrome.
+                                .input-group
+                                    span(class="input-group-addon" id="basic-addon1") Input a sequence of characters
+                                    input(type="text" class="form-control" id="palindromeWord" placeholder="word, phase, or series of characters")
+                                br
+                                .row
+                                    h4(id="palindromeResult")
+                                .row
+                                    .col-sm-6
+                                        button(class="btn btn-success" onclick="palindromeApi();") Submit
+                                        br
+                                        br
+                                    .col-sm-6
+                                        button(class="btn btn-info" data-toggle="modal" data-target="#palindromeApi") View Code
+                        
                 br       
                 .row.row-bottom-padded-sm
                     .container
@@ -490,6 +509,18 @@ html
                         br
                         h4 Full AWS Lambda code can be found 
                             a(href="https://github.com/criewaldt/LambdaWordFrequency") here
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        #palindromeApi.modal.fade(role='dialog')
+            .modal-dialog
+                // Modal content
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal') ×
+                        h4.modal-title Example API 3: Is it a palindrome?
+                    .modal-body
+                        br
+                        include palindrome.html
                     .modal-footer
                         button.btn.btn-default(type='button', data-dismiss='modal') Close
 

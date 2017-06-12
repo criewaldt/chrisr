@@ -43,7 +43,20 @@ function wordApi() {
     });
 }
 
+function palindromeApi() {
+    var data = {
+        palindromeWord: document.getElementById("palindromeWord").value
+        };
+    $.ajax({
+        type: "POST",
+        url: '/api/palindrome',
+        data: data,
+        success: function(result) {
+            document.getElementById("palindromeResult").innerHTML = result.msg;
+        }
+    });
+}
+
 $( document ).ready(function() {
-    //do something
-    
+    //document ready
 });
